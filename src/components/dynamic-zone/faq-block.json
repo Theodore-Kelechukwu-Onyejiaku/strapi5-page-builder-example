@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_dynamic_zone_faq_blocks",
+  "info": {
+    "displayName": "FAQBlock",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    }
+  },
+  "config": {}
+}
