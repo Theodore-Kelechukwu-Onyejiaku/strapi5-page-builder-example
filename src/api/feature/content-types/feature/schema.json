@@ -17,21 +17,10 @@
     "description": {
       "type": "text"
     },
-    "linkText": {
-      "type": "string"
-    },
-    "linkUrl": {
-      "type": "string"
-    },
-    "icon": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "link": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
     }
   }
 }

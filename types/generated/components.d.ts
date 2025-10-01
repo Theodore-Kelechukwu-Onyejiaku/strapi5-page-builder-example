@@ -19,8 +19,6 @@ export interface DynamicZoneHeroSection extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
-    ctaText: Schema.Attribute.String;
-    ctaUrl: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
