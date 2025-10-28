@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-01T23:27:36.042Z"
+    "x-generation-date": "2025-10-28T14:00:14.924Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8037,9 +8037,6 @@
                         "name": {
                           "type": "string"
                         },
-                        "slug": {
-                          "type": "string"
-                        },
                         "blogs": {
                           "type": "array",
                           "items": {
@@ -8053,6 +8050,9 @@
                               }
                             }
                           }
+                        },
+                        "slug": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -8121,9 +8121,6 @@
                           "name": {
                             "type": "string"
                           },
-                          "slug": {
-                            "type": "string"
-                          },
                           "blogs": {
                             "type": "array",
                             "items": {
@@ -8137,6 +8134,9 @@
                                 }
                               }
                             }
+                          },
+                          "slug": {
+                            "type": "string"
                           },
                           "createdAt": {
                             "type": "string",
@@ -8740,9 +8740,6 @@
               "name": {
                 "type": "string"
               },
-              "slug": {
-                "type": "string"
-              },
               "blogs": {
                 "type": "array",
                 "items": {
@@ -8756,6 +8753,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "slug": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -8823,9 +8823,6 @@
             "type": "string"
           },
           "name": {
-            "type": "string"
-          },
-          "slug": {
             "type": "string"
           },
           "blogs": {
@@ -9742,9 +9739,6 @@
                     "name": {
                       "type": "string"
                     },
-                    "slug": {
-                      "type": "string"
-                    },
                     "blogs": {
                       "type": "array",
                       "items": {
@@ -9758,6 +9752,9 @@
                           }
                         }
                       }
+                    },
+                    "slug": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -9826,9 +9823,6 @@
                       "name": {
                         "type": "string"
                       },
-                      "slug": {
-                        "type": "string"
-                      },
                       "blogs": {
                         "type": "array",
                         "items": {
@@ -9842,6 +9836,9 @@
                             }
                           }
                         }
+                      },
+                      "slug": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -9950,6 +9947,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -14415,9 +14415,6 @@
               "name": {
                 "type": "string"
               },
-              "slug": {
-                "type": "string"
-              },
               "blogs": {
                 "type": "array",
                 "items": {
@@ -14431,6 +14428,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "slug": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -14498,9 +14498,6 @@
             "type": "string"
           },
           "name": {
-            "type": "string"
-          },
-          "slug": {
             "type": "string"
           },
           "blogs": {
@@ -15417,9 +15414,6 @@
                     "name": {
                       "type": "string"
                     },
-                    "slug": {
-                      "type": "string"
-                    },
                     "blogs": {
                       "type": "array",
                       "items": {
@@ -15433,6 +15427,9 @@
                           }
                         }
                       }
+                    },
+                    "slug": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -15501,9 +15498,6 @@
                       "name": {
                         "type": "string"
                       },
-                      "slug": {
-                        "type": "string"
-                      },
                       "blogs": {
                         "type": "array",
                         "items": {
@@ -15517,6 +15511,9 @@
                             }
                           }
                         }
+                      },
+                      "slug": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -15625,6 +15622,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
