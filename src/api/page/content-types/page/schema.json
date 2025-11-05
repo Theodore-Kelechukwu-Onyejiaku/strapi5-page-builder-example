@@ -14,9 +14,6 @@
     "title": {
       "type": "string"
     },
-    "slug": {
-      "type": "string"
-    },
     "content": {
       "type": "richtext"
     },
@@ -32,6 +29,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::feature.feature"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
