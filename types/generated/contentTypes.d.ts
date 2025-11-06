@@ -400,7 +400,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'global.seo', false>;
-    slug: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -614,9 +614,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
-        'dynamic-zone.testimonial',
         'dynamic-zone.hero-section',
         'dynamic-zone.faq-block',
+        'global.seo',
+        'dynamic-zone.testimonial',
       ]
     >;
     slug: Schema.Attribute.UID<'title'>;

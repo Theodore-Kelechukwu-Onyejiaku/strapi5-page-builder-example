@@ -20,9 +20,10 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "dynamic-zone.testimonial",
         "dynamic-zone.hero-section",
-        "dynamic-zone.faq-block"
+        "dynamic-zone.faq-block",
+        "global.seo",
+        "dynamic-zone.testimonial"
       ]
     },
     "features": {

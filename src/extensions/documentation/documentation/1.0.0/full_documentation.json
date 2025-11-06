@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-05T11:25:51.375Z"
+    "x-generation-date": "2025-11-06T08:49:18.562Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6885,9 +6885,6 @@
               "title": {
                 "type": "string"
               },
-              "slug": {
-                "type": "string"
-              },
               "body": {
                 "type": "string"
               },
@@ -6957,6 +6954,9 @@
                   "example": "string or id"
                 }
               },
+              "slug": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -7023,9 +7023,6 @@
             "type": "string"
           },
           "title": {
-            "type": "string"
-          },
-          "slug": {
             "type": "string"
           },
           "body": {
@@ -7860,9 +7857,6 @@
                     "title": {
                       "type": "string"
                     },
-                    "slug": {
-                      "type": "string"
-                    },
                     "body": {
                       "type": "string"
                     },
@@ -8192,6 +8186,9 @@
                         }
                       }
                     },
+                    "slug": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -8323,6 +8320,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -8837,9 +8837,6 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
-                },
-                "slug": {
                   "type": "string"
                 },
                 "body": {
@@ -9893,6 +9890,9 @@
                       }
                     }
                   }
+                },
+                "slug": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
@@ -13270,22 +13270,26 @@
                 "items": {
                   "anyOf": [
                     {
-                      "$ref": "#/components/schemas/DynamicZoneTestimonialComponent"
-                    },
-                    {
                       "$ref": "#/components/schemas/DynamicZoneHeroSectionComponent"
                     },
                     {
                       "$ref": "#/components/schemas/DynamicZoneFaqBlockComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GlobalSeoComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/DynamicZoneTestimonialComponent"
                     }
                   ]
                 },
                 "discriminator": {
                   "propertyName": "__component",
                   "mapping": {
-                    "dynamic-zone.testimonial": "#/components/schemas/DynamicZoneTestimonialComponent",
                     "dynamic-zone.hero-section": "#/components/schemas/DynamicZoneHeroSectionComponent",
-                    "dynamic-zone.faq-block": "#/components/schemas/DynamicZoneFaqBlockComponent"
+                    "dynamic-zone.faq-block": "#/components/schemas/DynamicZoneFaqBlockComponent",
+                    "global.seo": "#/components/schemas/GlobalSeoComponent",
+                    "dynamic-zone.testimonial": "#/components/schemas/DynamicZoneTestimonialComponent"
                   }
                 }
               },
@@ -13382,22 +13386,26 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/DynamicZoneTestimonialComponent"
-                },
-                {
                   "$ref": "#/components/schemas/DynamicZoneHeroSectionComponent"
                 },
                 {
                   "$ref": "#/components/schemas/DynamicZoneFaqBlockComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/GlobalSeoComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/DynamicZoneTestimonialComponent"
                 }
               ]
             },
             "discriminator": {
               "propertyName": "__component",
               "mapping": {
-                "dynamic-zone.testimonial": "#/components/schemas/DynamicZoneTestimonialComponent",
                 "dynamic-zone.hero-section": "#/components/schemas/DynamicZoneHeroSectionComponent",
-                "dynamic-zone.faq-block": "#/components/schemas/DynamicZoneFaqBlockComponent"
+                "dynamic-zone.faq-block": "#/components/schemas/DynamicZoneFaqBlockComponent",
+                "global.seo": "#/components/schemas/GlobalSeoComponent",
+                "dynamic-zone.testimonial": "#/components/schemas/DynamicZoneTestimonialComponent"
               }
             }
           },
@@ -13540,22 +13548,26 @@
                   "items": {
                     "anyOf": [
                       {
-                        "$ref": "#/components/schemas/DynamicZoneTestimonialComponent"
-                      },
-                      {
                         "$ref": "#/components/schemas/DynamicZoneHeroSectionComponent"
                       },
                       {
                         "$ref": "#/components/schemas/DynamicZoneFaqBlockComponent"
+                      },
+                      {
+                        "$ref": "#/components/schemas/GlobalSeoComponent"
+                      },
+                      {
+                        "$ref": "#/components/schemas/DynamicZoneTestimonialComponent"
                       }
                     ]
                   },
                   "discriminator": {
                     "propertyName": "__component",
                     "mapping": {
-                      "dynamic-zone.testimonial": "#/components/schemas/DynamicZoneTestimonialComponent",
                       "dynamic-zone.hero-section": "#/components/schemas/DynamicZoneHeroSectionComponent",
-                      "dynamic-zone.faq-block": "#/components/schemas/DynamicZoneFaqBlockComponent"
+                      "dynamic-zone.faq-block": "#/components/schemas/DynamicZoneFaqBlockComponent",
+                      "global.seo": "#/components/schemas/GlobalSeoComponent",
+                      "dynamic-zone.testimonial": "#/components/schemas/DynamicZoneTestimonialComponent"
                     }
                   }
                 },
@@ -13643,7 +13655,7 @@
           }
         }
       },
-      "DynamicZoneTestimonialComponent": {
+      "DynamicZoneHeroSectionComponent": {
         "type": "object",
         "properties": {
           "id": {
@@ -13652,19 +13664,16 @@
           "__component": {
             "type": "string",
             "enum": [
-              "dynamic-zone.testimonial"
+              "dynamic-zone.hero-section"
             ]
           },
-          "quote": {
+          "title": {
             "type": "string"
           },
-          "authorName": {
+          "subtitle": {
             "type": "string"
           },
-          "authorRole": {
-            "type": "string"
-          },
-          "authorPhoto": {
+          "image": {
             "type": "object",
             "properties": {
               "id": {
@@ -13795,7 +13804,7 @@
           }
         }
       },
-      "DynamicZoneHeroSectionComponent": {
+      "DynamicZoneTestimonialComponent": {
         "type": "object",
         "properties": {
           "id": {
@@ -13804,16 +13813,19 @@
           "__component": {
             "type": "string",
             "enum": [
-              "dynamic-zone.hero-section"
+              "dynamic-zone.testimonial"
             ]
           },
-          "title": {
+          "quote": {
             "type": "string"
           },
-          "subtitle": {
+          "authorName": {
             "type": "string"
           },
-          "image": {
+          "authorRole": {
+            "type": "string"
+          },
+          "authorPhoto": {
             "type": "object",
             "properties": {
               "id": {
@@ -14512,9 +14524,6 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
-                },
-                "slug": {
                   "type": "string"
                 },
                 "body": {
@@ -15568,6 +15577,9 @@
                       }
                     }
                   }
+                },
+                "slug": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
